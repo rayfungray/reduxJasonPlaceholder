@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 const initialState = {
   count: 0,
   posts: [],
+  users: []
 };
 
 // takes current app state & action & RETURNS the new state
@@ -15,6 +16,8 @@ function reducer(state = initialState, action) {
       return { ...state, count: state.count - action.payload };
     case 'GET_POSTS':
       return { ...state, posts: action.payload };
+    case 'GET_USERS':
+      return { ...state, users: action.payload };
     default:
       return state;
   }

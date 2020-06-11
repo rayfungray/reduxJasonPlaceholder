@@ -23,13 +23,14 @@ export function fetchPosts() {
   };
 }
 
+//action creator
 export function getPosts(posts) {
   return {
     type: 'GET_POSTS',
     payload: posts,
   };
 }
-//reducer
+
 export function fetchUsers(){
   return async function (dispatch){
     const {data: users} = await axios.get(
